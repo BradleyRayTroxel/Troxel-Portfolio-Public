@@ -116,3 +116,18 @@ stages:
                 overrideParameters: >
                   -resourceGroupName "$(DefaultNamePrefix)RG"
                   -resourceGroupLocation "$(DefaultDeploymentLocation)"
+                deploymentOutputs: deploymentOutputs
+            - bash: |
+                echo "##vso[task.setvariable variable=resourceGroupName;isOutput=true]$(echo $DEPLOYMENT_OUTPUTS | jq -r '.resourceGroupName.value')"
+              name: SaveDeploymentOutputs
+              displayName: Save deployment outputs into variables
+              env:
+                DEPLOYMENT_OUTPUTS: $(deploymentOutputs)
+
+- stage: cd_smoke_test
+  displayName: "CD - Execute post-deployment checks"
+  jobs:
+  - job: SmokeTest
+    displayName: "Smoke test"
+    variables:
+      resourceGroupName: $[ stageDependencies.cd_deploy.Deploy.outputs['Deploy.SaveDeploymentOutputs.resourceGroupName'] ]
