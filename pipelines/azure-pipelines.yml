@@ -1,0 +1,36 @@
+trigger:
+  - main
+
+pool:
+  vmImage: windows-2025
+
+variables:
+  - group: Core-Variables
+
+stages:
+- stage: ci_test_pool_capabilities
+  displayName: "CI - Test the pool capabilities"
+  jobs:
+  - job: scripts_test
+    displayName: "Scripts"
+    steps:
+    - script: echo Hello, world!
+      displayName: 'Run a one-line script with echo'
+    - script: |
+        echo Add other tasks to build, test, and deploy your project.
+        echo See https://aka.ms/yaml
+      displayName: 'Run a multi-line script with echo'
+  - job: powershell_test
+    displayName: "PowerShell"
+    steps:
+    - task: PowerShell@2
+      displayName: 'PowerShell Version'
+      inputs:
+        targetType: inline
+        script: |
+          $PSVersionTable
+    - task: PowerShell@2
+      displayName: 'PowerShell Write-Host'
+      inputs:
+        targetType: filePath
+        filePath: '$(Build.SourcesDirectory)/scripts/hello-world.ps1'
