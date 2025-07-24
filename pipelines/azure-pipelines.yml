@@ -57,3 +57,20 @@ stages:
         targetType: inline
         script: |
           bicep build --file main.bicep
+- stage: ci_validate
+  displayName: "CI - Validate the code in Azure Resource Manager"
+  jobs:
+  - job: validate_bicep
+    displayName: "Validate Bicep"
+    steps:
+      - task: AzureResourceManagerTemplateDeployment@3
+        inputs:
+          deploymentName: $(Build.BuildNumber)
+          deploymentScope: 'Management Group'
+          azureResourceManagerConnection: $(ServiceConnectionName)
+          subscriptionId: $(DefaultSubId)
+          csmFile: bicep/main.bicep
+          deploymentMode: Validation
+          overrideParameters: >
+            -resourceGroupName "$(DefaultNamePrefix)RG"
+            -resourceGroupLocation "$(DefaultDeploymentLocation)"
