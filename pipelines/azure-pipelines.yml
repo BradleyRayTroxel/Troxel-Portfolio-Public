@@ -74,3 +74,22 @@ stages:
           overrideParameters: >
             -resourceGroupName "$(DefaultNamePrefix)RG"
             -resourceGroupLocation "$(DefaultDeploymentLocation)"
+- stage: ci_preview
+  displayName: "CI - Perform preview using what-if"
+  jobs:
+  - job:
+    displayName: "Running Code For Preview"
+    steps:
+    - task: AzurePowerShell@5
+      displayName: "AzurePowershell What-If deployment"
+      inputs:
+        azureSubscription: $(ServiceConnectionName)
+        ScriptType: InlineScript
+        Inline: |
+          Set-AzContext -SubscriptionId $(DefaultSubId)
+          New-AzDeployment `
+            -Location "$(DefaultDeploymentLocation)" `
+            -TemplateFile "bicep/main.bicep" `
+            -resourceGroupName "$(DefaultNamePrefix)RG" `
+            -resourceGroupLocation "$(DefaultDeploymentLocation)"
+            -WhatIf
