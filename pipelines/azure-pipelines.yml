@@ -44,3 +44,16 @@ stages:
         targetType: inline
         script: |
           bicep --version
+- stage: ci_lint
+  displayName: "CI - Perform lint on code"
+  jobs:
+  - job: lint_bicep
+    displayName: "Lint Bicep"
+    steps:
+    - task: PowerShell@2
+      displayName: 'Lint Bicep'
+      inputs:
+        workingDirectory: '$(Build.SourcesDirectory)/bicep'
+        targetType: inline
+        script: |
+          bicep build --file main.bicep
