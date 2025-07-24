@@ -93,3 +93,26 @@ stages:
             -resourceGroupName "$(DefaultNamePrefix)RG" `
             -resourceGroupLocation "$(DefaultDeploymentLocation)"
             -WhatIf
+- stage: cd_deploy
+  displayName: "CD - Begin deployment"
+  jobs:
+    - deployment: Deploy
+      environment: Troxel-Portfolio
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - checkout: self
+            - task: AzureResourceManagerTemplateDeployment@3
+              name: DeployBicepFile
+              displayName: "Deploy Bicep File"
+              inputs:
+                deploymentName: $(Build.BuildNumber)
+                deploymentScope: 'Management Group'
+                azureResourceManagerConnection: $(ServiceConnectionName)
+                subscriptionId: $(DefaultSubId)
+                csmFile: bicep/main.bicep
+                deploymentMode: Validation
+                overrideParameters: >
+                  -resourceGroupName "$(DefaultNamePrefix)RG"
+                  -resourceGroupLocation "$(DefaultDeploymentLocation)"
