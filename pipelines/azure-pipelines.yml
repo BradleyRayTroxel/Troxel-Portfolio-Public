@@ -34,3 +34,13 @@ stages:
       inputs:
         targetType: filePath
         filePath: '$(Build.SourcesDirectory)/scripts/hello-world.ps1'
+  - job: bicep_test
+    displayName: "Bicep"
+    dependsOn: powershell_test
+    steps:
+    - task: PowerShell@2
+      displayName: 'Bicep CLI Version'
+      inputs:
+        targetType: inline
+        script: |
+          bicep --version
