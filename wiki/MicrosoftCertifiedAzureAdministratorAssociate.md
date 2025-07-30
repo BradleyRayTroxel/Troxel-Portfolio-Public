@@ -40,19 +40,19 @@ John Savill provides a free presentation of the information covered in the exam 
 
 ### Legacy Notes And Flashcards
 
-I took some notes when I was studying for the exam in 2022, and they can be found [in the wiki assets](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Private/blob/main/wiki/assets/LegacyJohnSavillCramNotes.md).
+I took some notes when I was studying for the exam in 2022, and they can be found [in the wiki assets](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Public/blob/main/wiki/assets/LegacyJohnSavillCramNotes.md).
 
 Also I created some flash cards in 2022 hosted on the website Quizlet. [Here is a link to that set of flash cards](https://quizlet.com/user/bRad1300/folders/2022-az-104).
 
 Here are pdf copies of the websites contents
 
-- [2022Az104ConfigureAndManageVirtualNetworksForAzureAdministrators](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Private/blob/main/wiki/assets/2022Az104ConfigureAndManageVirtualNetworksForAzureAdministrators.pdf)
-- [2022Az104DeployAndManageAzureComputeResources](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Private/blob/main/wiki/assets/2022Az104DeployAndManageAzureComputeResources.pdf)
-- [2022Az104ImplementAndManageStorageInAzure](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Private/blob/main/wiki/assets/2022Az104ImplementAndManageStorageInAzure.pdf)
-- [2022Az104ManageIdentitiesAndGovernanceInAzure](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Private/blob/main/wiki/assets/2022Az104ManageIdentitiesAndGovernanceInAzure.pdf)
-- [2022Az104MonitorAndBackUpAzureResources](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Private/blob/main/wiki/assets/2022Az104MonitorAndBackUpAzureResources.pdf)
-- [2022Az104PrerequisitesForAzureAdministrators](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Private/blob/main/wiki/assets/2022Az104PrerequisitesForAzureAdministrators.pdf)
-- [2022Az104SkillsMeasured](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Private/blob/main/wiki/assets/2022Az104SkillsMeasured.pdf)
+- [2022Az104ConfigureAndManageVirtualNetworksForAzureAdministrators](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Public/blob/main/wiki/assets/2022Az104ConfigureAndManageVirtualNetworksForAzureAdministrators.pdf)
+- [2022Az104DeployAndManageAzureComputeResources](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Public/blob/main/wiki/assets/2022Az104DeployAndManageAzureComputeResources.pdf)
+- [2022Az104ImplementAndManageStorageInAzure](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Public/blob/main/wiki/assets/2022Az104ImplementAndManageStorageInAzure.pdf)
+- [2022Az104ManageIdentitiesAndGovernanceInAzure](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Public/blob/main/wiki/assets/2022Az104ManageIdentitiesAndGovernanceInAzure.pdf)
+- [2022Az104MonitorAndBackUpAzureResources](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Public/blob/main/wiki/assets/2022Az104MonitorAndBackUpAzureResources.pdf)
+- [2022Az104PrerequisitesForAzureAdministrators](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Public/blob/main/wiki/assets/2022Az104PrerequisitesForAzureAdministrators.pdf)
+- [2022Az104SkillsMeasured](https://github.com/BradleyRayTroxel/Troxel-Portfolio-Public/blob/main/wiki/assets/2022Az104SkillsMeasured.pdf)
 
 ## Exam Tips
 
